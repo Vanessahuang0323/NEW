@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 創建 axios 實例
 const api = axios.create({
-  baseURL: process.env.REACT_APP_CHATBOT_API_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_REACT_APP_CHATBOT_API_URL || 'http://localhost:5000/api',
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
@@ -336,4 +336,4 @@ export const applicationApi = {
   },
 };
 
-export default api; 
+export default api;
